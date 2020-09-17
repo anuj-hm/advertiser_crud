@@ -1,11 +1,9 @@
 const express = require('express');
+const path = require('path')
+const bodyParser = require('body-parser');
 const app = express();
 const http = require('http').Server(app)
-const bodyParser = require('body-parser');
 const appRoutes = require('./app/routes');
-const path = require('path')
-const busboyBodyParser = require('busboy-body-parser');
-
 //Init databases connection
 require('./app/dbManager')
 
@@ -17,7 +15,6 @@ app.get('/', (req, res) => {
 });
 
 app.use(bodyParser.json());
-app.use(busboyBodyParser());
 app.use('/api', require('./app/routes'))
 
 process.on('unhandledRejection', (err) => {
