@@ -1,0 +1,19 @@
+{
+  "name": "ads",
+  "author": "Anuj Gupta",
+  "version": "1.0.0",
+  "description": "API's for ads",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "docker"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.7"
+  }
+}
